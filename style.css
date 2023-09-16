@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&family=Roboto:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Navbar */
+
+header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+.navbar ul {
+  position: sticky;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar ul li {
+  list-style-type: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  position: relative;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.navbar ul li a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: #333;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: right;
+}
+
+.navbar ul li a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.header {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+.header h1 {
+  font-size: 4rem;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.section_2 {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.container h1 {
+  color: #333;
+  position: static;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 20px;
+}
+
+.container div {
+  display: flex;
+  flex-direction: row;
+}
+
+.container div img {
+  width: 30vw;
+  height: 40vh;
+  border-radius: 20px;
+  margin: 1vw;
+}
+
+.container div p {
+  margin-left: 8vw;
+}
+
+.section_2 {
+  padding-bottom: 4vw;
+  border-bottom: 1px solid rgb(202, 188, 188);
+}
+.section_3 {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+}
+
+.container_2 h1 {
+  color: #333;
+  position: static;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 20px;
+}
+
+.container_2 div {
+  display: flex;
+  flex-direction: row;
+}
+
+.container_2 div img {
+  width: 30vw;
+  height: 40vh;
+  border-radius: 20px;
+  margin-left: 8vw;
+}
+
+.container_2 div p {
+  margin: 1vw;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+}
+
+/* About */
+
+.abt-header {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+}
+
+.abt-header h1 {
+  font-size: 2.3rem;
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.abt-section_3 {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  padding: 30px;
+}
+
+/* Contact Us */
+/* Style inputs */
+#text{
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+}
+.column img{
+  width: 100%;
+  height: 50vh;
+  border-radius: 20px;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.ctn-container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.ctn-section_2{
+  margin-bottom: 50px;
+}
